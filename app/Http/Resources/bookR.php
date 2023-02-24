@@ -13,16 +13,16 @@ class bookR extends JsonResource
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
     public function toArray($request)
-    {
-        return [
-            'id' => $this->id,
-            'name_book'=> $this->name_book,
-            'summary' => $this->summary,
-            'publisher' => $this->publisher,
-            'pages' => $this->pages,
-            'qty' => $this->qty,
-            'date_release' => $this->date_release,
-            'created_at' => date_format($this->created_at, 'd-m-Y H:i:s')
-           ];
+{
+    return [
+        'id' => $this->id,
+        'name_book' => $this->name_book,
+        'summary' => $this->summary,
+        'publisher' => $this->publisher,
+        'pages' => $this->pages,
+        'qty' => $this->qty,
+        'date_release' => $this->date_release,
+        'created_at' => date_format($this->created_at,'d-m-Y H:i:s')
+       ];
     }
 }
